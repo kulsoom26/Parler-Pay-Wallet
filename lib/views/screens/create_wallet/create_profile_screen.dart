@@ -153,6 +153,8 @@ class CreateProfileScreen extends GetView<CreateWalletController> {
 }
 
 class BottomSheetContent extends StatelessWidget {
+  const BottomSheetContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -231,7 +233,7 @@ class BottomSheetContent extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(9999.r),
                       border: Border.all(
-                        color: Color(0xFFD4D4D4),
+                        color: const Color(0xFFD4D4D4),
                         width: 1
                       )),
                       

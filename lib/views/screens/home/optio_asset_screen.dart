@@ -70,7 +70,7 @@ class OptioAssetScreen extends GetView<HomeController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 45.h),
-              CustomAssetBanner(subtitle: '2,224.12 OPTIO', isTapNPay: true),
+              const CustomAssetBanner(subtitle: '2,224.12 OPTIO', isTapNPay: true),
               SizedBox(height: 5.h),
               Divider(color: kWhiteColor.withOpacity(0.32), height: 0),
               Container(
@@ -98,7 +98,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                                       isScrollControlled: true,
                                       backgroundColor: Colors.transparent,
                                       builder: (context) =>
-                                          CustomFilterModal(color1: kBlueGradientColor1, color2: kBlueGradientColor2),
+                                          const CustomFilterModal(color1: kBlueGradientColor1, color2: kBlueGradientColor2),
                                     );
                             },
                             child: Text(
@@ -114,7 +114,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                       SizedBox(height: 12.h),
                       ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemCount: controller.optioAssetList.length,
                         itemBuilder: (context, index) {
                           final item = controller.optioAssetList[index];
@@ -304,7 +304,7 @@ class OptioAssetScreen extends GetView<HomeController> {
 
   Widget _buildTransactionModal() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [kBlueGradientColor1, kBlueGradientColor2],
           begin: Alignment.topLeft,
@@ -321,7 +321,7 @@ class OptioAssetScreen extends GetView<HomeController> {
         children: [
           SizedBox(
             width: 80.w,
-            child: Divider(
+            child: const Divider(
               color: kGray500,
             ),
           ),
@@ -331,7 +331,7 @@ class OptioAssetScreen extends GetView<HomeController> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -341,7 +341,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kWhiteColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -358,7 +358,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kWhiteColor))),
+                        const Center(child: Icon(Icons.close, color: kWhiteColor))),
               ),
             ],
           ),
@@ -385,7 +385,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                     width: 28.w,
                     height: 28.h,
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(
+                        gradient: const LinearGradient(
                           colors: [kBlueGradientColor1, kBlueGradientColor2],
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
@@ -445,7 +445,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'To:',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 'You',
                 style: AppStyles.labelTextStyle()
@@ -462,7 +462,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'Network:',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 'Ethereum',
                 style: AppStyles.labelTextStyle()
@@ -479,7 +479,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'Submitted:',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 '3:14 PM - May 12, 2024',
                 style: AppStyles.labelTextStyle()
@@ -496,7 +496,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'Completed On:',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 '3:15 PM - May 12, 2024',
                 style: AppStyles.labelTextStyle()
@@ -513,7 +513,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'Amount',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 '4,224.21 OPTIO (\$221.21)',
                 style: AppStyles.labelTextStyle()
@@ -530,7 +530,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'Network Fee:',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 '0.000593 ETH (\$1.83)',
                 style: AppStyles.labelTextStyle()
@@ -547,7 +547,7 @@ class OptioAssetScreen extends GetView<HomeController> {
                 'Status:',
                 style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 'Completed',
                 style: AppStyles.labelTextStyle()

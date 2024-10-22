@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
             getPages: RouteGenerator.getPages(),
             builder: (context, child) {
               return MediaQuery(
-                  data: MediaQuery.of(context).copyWith(textScaleFactor: MediaQuery.of(context).textScaleFactor.clamp(1.0, 1.0)), child: child!);
+                  data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(MediaQuery.of(context).textScaleFactor.clamp(1.0, 1.0))), child: child!);
             });
       },
     );

@@ -68,7 +68,7 @@ class BTCAssetScreen extends GetView<HomeController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 45.h),
-              CustomAssetBanner(subtitle: '2,224.12 BTC', isTapNPay: false),
+              const CustomAssetBanner(subtitle: '2,224.12 BTC', isTapNPay: false),
               SizedBox(height: 5.h,),
               Divider(color: kWhiteColor.withOpacity(0.32), height: 0,),
               Container(
@@ -96,7 +96,7 @@ class BTCAssetScreen extends GetView<HomeController> {
                                       isScrollControlled: true,
                                       backgroundColor: Colors.transparent,
                                       builder: (context) =>
-                                          CustomFilterModal(color1: kOrangeGradientColor1, color2: kOrangeGradientColor2),
+                                          const CustomFilterModal(color1: kOrangeGradientColor1, color2: kOrangeGradientColor2),
                                     );
                             },
                             child: Text(
@@ -112,7 +112,7 @@ class BTCAssetScreen extends GetView<HomeController> {
                       SizedBox(height: 12.h),
                       ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemCount: controller.btcAssetList.length,
                         itemBuilder: (context, index) {
                           final item = controller.btcAssetList[index];

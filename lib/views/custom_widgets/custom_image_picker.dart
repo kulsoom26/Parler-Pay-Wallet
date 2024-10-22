@@ -72,7 +72,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                   ),
                 ),
                 SizedBox(height: 10.h),
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -81,7 +81,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                       padding: EdgeInsets.symmetric(vertical: 15.h),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.r),
-                        side: BorderSide(color: Colors.black),
+                        side: const BorderSide(color: Colors.black),
                       ),
                     ),
                     onPressed: () {
@@ -114,7 +114,7 @@ class _CustomProfileImagePickerState extends State<CustomProfileImagePicker> {
                 border: Border.all(color: kWhiteColor, width: 2),
               ),
               child: controller.isUploading.isTrue
-                  ? CircularProgressIndicator(
+                  ? const CircularProgressIndicator(
                       color: kPrimaryColor,
                     )
                   : controller.imagePath.value.isEmpty

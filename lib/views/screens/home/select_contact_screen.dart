@@ -57,7 +57,7 @@ class FindContactScreen extends GetView<HomeController> {
             ),
             child: TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search, color: kWhiteColor),
+                prefixIcon: const Icon(Icons.search, color: kWhiteColor),
                 hintText: 'Search by address, name, or...',
                 hintStyle: TextStyle(color: kWhiteColor.withOpacity(0.5)),
                 border: InputBorder.none,
@@ -66,14 +66,14 @@ class FindContactScreen extends GetView<HomeController> {
                   borderRadius: BorderRadius.circular(25.r),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: kWhiteColor),
+                  borderSide: const BorderSide(color: kWhiteColor),
                   borderRadius: BorderRadius.circular(25.r),
                 ),
                 filled: true,
                 fillColor: kWhiteColor.withOpacity(0.05),
                 contentPadding: EdgeInsets.symmetric(vertical: 10.h),
               ),
-              style: TextStyle(color: kWhiteColor),
+              style: const TextStyle(color: kWhiteColor),
             ),
           ),
           actions: [
@@ -127,7 +127,7 @@ class FindContactScreen extends GetView<HomeController> {
                           ),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Obx(
                         () => GestureDetector(
                           onTap: () {
@@ -169,7 +169,7 @@ class FindContactScreen extends GetView<HomeController> {
           ),
         ),
         bottomNavigationBar: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           child: Obx(
             () => CustomButton(
               height: 56.h,
@@ -247,7 +247,7 @@ class _ContactGridState extends State<ContactGrid> {
                   radius: 34.r,
                   backgroundColor: isSelected ? kRedColor : Colors.transparent,
                   child: isSelected
-                      ? Icon(Icons.check, color: kWhiteColor)
+                      ? const Icon(Icons.check, color: kWhiteColor)
                       : CircleAvatar(
                           radius: 32.r,
                           backgroundImage: AssetImage(item['image']),

@@ -10,7 +10,7 @@ import '../../utils/app_styles.dart';
 import 'custom_button.dart';
 
 class LoadingModal extends StatefulWidget {
-  LoadingModal({required this.isRequest});
+  const LoadingModal({super.key, required this.isRequest});
   final bool isRequest;
   @override
   _LoadingModalState createState() => _LoadingModalState();
@@ -28,7 +28,7 @@ class _LoadingModalState extends State<LoadingModal>
       vsync: this,
     )..repeat();
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
       _controller.stop();
       Get.back();
       showModalBottomSheet(
@@ -50,7 +50,7 @@ class _LoadingModalState extends State<LoadingModal>
   Widget build(BuildContext context) {
     return Container(
       height: 400.h,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [kPrimaryColor, kPrimaryColor2],
           begin: Alignment.topLeft,
@@ -67,7 +67,7 @@ class _LoadingModalState extends State<LoadingModal>
         children: [
           SizedBox(
             width: 80.w,
-            child: Divider(
+            child: const Divider(
               color: kGray500,
             ),
           ),
@@ -90,7 +90,7 @@ class _LoadingModalState extends State<LoadingModal>
   Widget _doneModal(BuildContext context, bool isRequest) {
     HomeController controller = Get.put(HomeController());
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [kPrimaryColor, kPrimaryColor2],
           begin: Alignment.topLeft,
@@ -107,7 +107,7 @@ class _LoadingModalState extends State<LoadingModal>
         children: [
           SizedBox(
             width: 80.w,
-            child: Divider(
+            child: const Divider(
               color: kGray500,
             ),
           ),
@@ -131,7 +131,7 @@ class _LoadingModalState extends State<LoadingModal>
                     ),
                     borderRadius: BorderRadius.circular(16.r),
                   ),
-                  child: Center(child: Icon(Icons.close, color: kWhiteColor))),
+                  child: const Center(child: Icon(Icons.close, color: kWhiteColor))),
             ),
           ),
           SizedBox(height: 20.h),

@@ -11,7 +11,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      shape: RoundedRectangleBorder(
+      shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.zero,
       ),
       child: Container(
@@ -29,7 +29,7 @@ class CustomDrawer extends StatelessWidget {
              SizedBox(height: 5.h,),
              Center(child: Text('@jess_kram', style: AppStyles.labelTextStyle().copyWith(color: kGray200),)),
             SizedBox(height: 24.h,),
-            Divider(color: kGray300,),
+            const Divider(color: kGray300,),
             SizedBox(height: 20.h,),
             GestureDetector(
               onTap: (){},
@@ -115,16 +115,16 @@ class CustomDrawer extends StatelessWidget {
               ),
             ),
            
-            Spacer(),
+            const Spacer(),
             
-            Divider(color: kGray300,),
+            const Divider(color: kGray300,),
             SizedBox(height:15.h),
             Padding(padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Settings & Support', style: AppStyles.labelTextStyle().copyWith(color: kWhiteColor, fontSize: 16.sp, fontWeight: FontWeight.bold)),
-                Icon(Icons.expand_more, color: kWhiteColor),
+                const Icon(Icons.expand_more, color: kWhiteColor),
               ],
             ),
             ),

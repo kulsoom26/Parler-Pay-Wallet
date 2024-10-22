@@ -139,7 +139,7 @@ class VerificationScreen extends GetView<CreateWalletController> {
               ),
               Obx(() => AnimatedOpacity(
                     opacity: controller.showVerificationError.value ? 1.0 : 0.0,
-                    duration: Duration(milliseconds: 300),
+                    duration: const Duration(milliseconds: 300),
                     child: controller.showVerificationError.isTrue
                         ? Container(
                             width: Get.width * 0.85,
@@ -202,7 +202,7 @@ class VerificationScreen extends GetView<CreateWalletController> {
                             if (controller.code != '123456') {
                               controller.showVerificationError.value = true;
                               print('errror...................');
-                              Future.delayed(Duration(seconds: 2), () {
+                              Future.delayed(const Duration(seconds: 2), () {
                                 controller.showVerificationError.value = false;
                               });
                             } else {

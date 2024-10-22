@@ -17,7 +17,7 @@ class CustomTextField extends StatefulWidget {
   final Color? hintColor;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.hint,
     required this.controller,
     this.isPassword = false,
@@ -25,7 +25,7 @@ class CustomTextField extends StatefulWidget {
     this.height,
     this.width,
     this.hintColor
-  }) : super(key: key);
+  });
 
   @override
   _CustomTextFieldState createState() => _CustomTextFieldState();
@@ -64,7 +64,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9999),
-            borderSide: BorderSide(color: kWhiteColor),
+            borderSide: const BorderSide(color: kWhiteColor),
           ),
         
           enabledBorder: OutlineInputBorder(

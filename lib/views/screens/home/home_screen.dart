@@ -154,7 +154,7 @@ class HomeScreen extends GetView<HomeController> {
                 width: Get.width,
                 decoration: BoxDecoration(
                     color: kBlackColor.withOpacity(0.5),
-                    border: Border(top: BorderSide(color: kPrimaryColor))),
+                    border: const Border(top: BorderSide(color: kPrimaryColor))),
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   child: Column(
@@ -264,7 +264,7 @@ class HomeScreen extends GetView<HomeController> {
                         ),
                         trailing: GestureDetector(
                           onTap: () {},
-                          child: Icon(
+                          child: const Icon(
                             Icons.keyboard_arrow_right,
                             color: kGray400,
                           ),
@@ -297,7 +297,7 @@ class HomeScreen extends GetView<HomeController> {
                         ),
                         trailing: GestureDetector(
                           onTap: () {},
-                          child: Icon(
+                          child: const Icon(
                             Icons.keyboard_arrow_right,
                             color: kGray400,
                           ),
@@ -325,7 +325,7 @@ class HomeScreen extends GetView<HomeController> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.add,
                                 color: kWhiteColor,
                               ),
@@ -357,7 +357,7 @@ class HomeScreen extends GetView<HomeController> {
                           ),
                           GestureDetector(
                             onTap: () {},
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_right,
                               color: kGray400,
                             ),
@@ -666,7 +666,7 @@ class GradientText extends StatelessWidget {
   final TextStyle style;
   final Gradient gradient;
 
-  const GradientText({
+  const GradientText({super.key, 
     required this.text,
     required this.style,
     required this.gradient,

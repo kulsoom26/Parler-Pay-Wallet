@@ -401,7 +401,7 @@ class NotificationScreen extends GetView<NotificationController> {
                                     text: TextSpan(
                                       style: AppStyles.labelTextStyle()
                                           .copyWith(color: kGray500),
-                                      children: [
+                                      children: const [
                                         TextSpan(
                                             text:
                                                 'Your payment request of [amount] was '),
@@ -616,7 +616,7 @@ class NotificationScreen extends GetView<NotificationController> {
                                     text: TextSpan(
                                       style:
                                           AppStyles.labelTextStyle().copyWith(),
-                                      children: [
+                                      children: const [
                                         TextSpan(
                                             text:
                                                 'Your payment request of [amount] was '),
@@ -689,7 +689,7 @@ class NotificationScreen extends GetView<NotificationController> {
                                     text: TextSpan(
                                       style:
                                           AppStyles.labelTextStyle().copyWith(),
-                                      children: [
+                                      children: const [
                                         TextSpan(
                                             text:
                                                 'Your payment request of [amount] is '),

@@ -157,7 +157,7 @@ class SendMoneyScreen extends GetView<HomeController> {
                                   style: AppStyles.labelTextStyle()
                                       .copyWith(fontSize: 30.sp),
                                 )),
-                          Container(
+                          SizedBox(
                             width: 160.w,
                             child: TextField(
                               style: AppStyles.labelTextStyle().copyWith(
@@ -1275,7 +1275,7 @@ class SendMoneyScreen extends GetView<HomeController> {
           shrinkWrap: true,
           itemBuilder: (context, index) {
             if (index == 9) {
-              return SizedBox.shrink();
+              return const SizedBox.shrink();
             } else if (index == 11) {
               return GestureDetector(
                 onTap: () {

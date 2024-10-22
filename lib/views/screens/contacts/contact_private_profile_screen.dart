@@ -27,7 +27,7 @@ class ContactPrivateProfileDetailScreen extends GetView<ContactController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ProfileHeader(controller: controller),
-              Divider(
+              const Divider(
                 color: kStrokeColor,
               ),
               SizedBox(
@@ -163,7 +163,7 @@ class ContactPrivateProfileDetailScreen extends GetView<ContactController> {
                                     )
                                   ],
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.end,
@@ -283,7 +283,7 @@ class ContactPrivateProfileDetailScreen extends GetView<ContactController> {
                                     ),
                                   ),
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Container(
                                       width: 40.w,
                                       height: 40.h,
@@ -295,7 +295,7 @@ class ContactPrivateProfileDetailScreen extends GetView<ContactController> {
                                               width: 1,
                                               color:  kWhiteColor
                                                       .withOpacity(0.2))),
-                                      child: Center(
+                                      child: const Center(
                                         child: Icon(Icons.more_vert, color: kWhiteColor,)
                                       ),
                                     ),
@@ -361,7 +361,7 @@ class ProfileHeader extends StatelessWidget {
                         color: kWhiteColor.withOpacity(0.12),
                         border: Border.all(width: 1, color: kWhiteColor),
                         borderRadius: BorderRadius.circular(9999.r)),
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.keyboard_arrow_left,
                         color: kWhiteColor,
@@ -369,10 +369,10 @@ class ProfileHeader extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                   onTap: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.more_vert_sharp,
                     color: kWhiteColor,
                   ),
@@ -389,7 +389,7 @@ class ProfileHeader extends StatelessWidget {
                   width: 56.w,
                   height: 56.h,
                 ),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                   onTap: () {},
                   child: Container(
@@ -406,7 +406,7 @@ class ProfileHeader extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Icon(Icons.add, color: kWhiteColor,),
+                            const Icon(Icons.add, color: kWhiteColor,),
                             SizedBox(width: 3.w,),
                             Text('Add', style: AppStyles.labelTextStyle().copyWith(fontSize: 16.sp, fontWeight: FontWeight.w600),)
                           ],
@@ -436,11 +436,11 @@ class ProfileHeader extends StatelessWidget {
                               : kWhiteColor.withOpacity(0.12)),
                       child: Center(
                         child: Obx(() => controller.isProfileFav1.isTrue
-                            ? Icon(
+                            ? const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.star_border,
                                 color: kWhiteColor,
                               )),

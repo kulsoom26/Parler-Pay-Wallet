@@ -134,7 +134,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                                         color: kGreyIconColor, fontSize: 12.sp),
                                   ))
                               : null,
-                          trailing: Icon(
+                          trailing: const Icon(
                             Icons.keyboard_arrow_down,
                             color: kWhiteColor,
                           ),
@@ -157,7 +157,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                                   style: AppStyles.labelTextStyle()
                                       .copyWith(fontSize: 30.sp),
                                 )),
-                          Container(
+                          SizedBox(
                             width: 160.w,
                             child: TextField(
                               style: AppStyles.labelTextStyle().copyWith(
@@ -254,7 +254,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
 
   Widget _buildTypeModal() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [kPrimaryColor, kPrimaryColor2],
           begin: Alignment.topLeft,
@@ -271,7 +271,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
         children: [
           SizedBox(
             width: 80.w,
-            child: Divider(
+            child: const Divider(
               color: kGray500,
             ),
           ),
@@ -281,7 +281,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -291,7 +291,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kWhiteColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -308,7 +308,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kWhiteColor))),
+                        const Center(child: Icon(Icons.close, color: kWhiteColor))),
               ),
             ],
           ),
@@ -365,7 +365,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                           borderRadius: BorderRadius.circular(999.r)),
                       child: Center(
                         child: Text(
-                          'Bank \& Cards',
+                          'Bank & Cards',
                           style: AppStyles.labelTextStyle().copyWith(
                               color: controller.index == 1
                                   ? kPrimaryColor
@@ -523,7 +523,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
               ? SizedBox(
                   height: 60.h,
                 )
-              : SizedBox(),
+              : const SizedBox(),
           GestureDetector(
             onTap: () {
               Get.back();
@@ -554,7 +554,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
 
   Widget _confirmationModal(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
           colors: [kPrimaryColor, kPrimaryColor2],
           begin: Alignment.topLeft,
@@ -571,7 +571,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
         children: [
           SizedBox(
             width: 80.w,
-            child: Divider(
+            child: const Divider(
               color: kGray500,
             ),
           ),
@@ -581,7 +581,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -591,7 +591,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kWhiteColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -608,7 +608,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kWhiteColor))),
+                        const Center(child: Icon(Icons.close, color: kWhiteColor))),
               ),
             ],
           ),
@@ -635,7 +635,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                         style: AppStyles.labelTextStyle()
                             .copyWith(fontSize: 16.sp, color: kWhiteColor),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Image.asset(
                         kUser2,
                         width: 24.h,
@@ -652,7 +652,7 @@ class RequestMoneyScreen extends GetView<HomeController> {
                         style: AppStyles.labelTextStyle()
                             .copyWith(color: kWhiteColor),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         '4,224.21 OPTIO (\$220.21)',
                         style: AppStyles.labelTextStyle()

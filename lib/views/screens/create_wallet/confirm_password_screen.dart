@@ -40,7 +40,7 @@ class ConfirmPasswordScreen extends GetView<CreateWalletController> {
                         onTap: () {
                           Get.back();
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.keyboard_arrow_left,
                           color: kWhiteColor,
                           size: 25,
@@ -123,7 +123,7 @@ class ConfirmPasswordScreen extends GetView<CreateWalletController> {
               ),
               Obx(() => AnimatedOpacity(
                 opacity: controller.showConfirmPasswordError.value ? 1.0 : 0.0,
-                duration: Duration(milliseconds: 300),
+                duration: const Duration(milliseconds: 300),
                 child: controller.showConfirmPasswordError.isTrue
                     ? Container(
                         width: Get.width * 0.85,
@@ -181,7 +181,7 @@ class ConfirmPasswordScreen extends GetView<CreateWalletController> {
                 if (controller.password.text !=
                     controller.confirmPassword.text) {
                  controller.showConfirmPasswordError.value = true;
-                  Future.delayed(Duration(seconds: 2), () {
+                  Future.delayed(const Duration(seconds: 2), () {
                     controller.showConfirmPasswordError.value = false;
                   });
                 } else {

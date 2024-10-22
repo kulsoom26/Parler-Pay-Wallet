@@ -27,7 +27,7 @@ class PrivateAccountDetailScreen extends GetView<ContactController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               ProfileHeader(controller: controller),
-              Divider(
+              const Divider(
                 color: kStrokeColor,
               ),
               SizedBox(
@@ -64,7 +64,7 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 380.h,
       width: Get.width,
       
@@ -88,7 +88,7 @@ class ProfileHeader extends StatelessWidget {
                         color: kWhiteColor.withOpacity(0.12),
                         border: Border.all(width: 1, color: kWhiteColor),
                         borderRadius: BorderRadius.circular(9999.r)),
-                    child: Center(
+                    child: const Center(
                       child: Icon(
                         Icons.keyboard_arrow_left,
                         color: kWhiteColor,
@@ -96,10 +96,10 @@ class ProfileHeader extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 GestureDetector(
                   onTap: () {},
-                  child: Icon(
+                  child: const Icon(
                     Icons.more_vert_sharp,
                     color: kWhiteColor,
                   ),
@@ -123,7 +123,7 @@ class ProfileHeader extends StatelessWidget {
                     child: Image.asset(kContactUserIcon, width: 22.4,),
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 
                 GestureDetector(
                   onTap: () {
@@ -147,11 +147,11 @@ class ProfileHeader extends StatelessWidget {
                               : kWhiteColor.withOpacity(0.12)),
                       child: Center(
                         child: Obx(() => controller.isProfileFav1.isTrue
-                            ? Icon(
+                            ? const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                               )
-                            : Icon(
+                            : const Icon(
                                 Icons.star_border,
                                 color: kWhiteColor,
                               )),

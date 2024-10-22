@@ -180,7 +180,7 @@ class BackupScreen extends GetView<CreateWalletController> {
                             ClipboardData(text: controller.backUpCode.value));
 
                         controller.showCopiedMessage.value = true;
-                        Future.delayed(Duration(seconds: 2), () {
+                        Future.delayed(const Duration(seconds: 2), () {
                           controller.showCopiedMessage.value = false;
                         });
                       },
@@ -205,7 +205,7 @@ class BackupScreen extends GetView<CreateWalletController> {
               Obx(() => Center(
                     child: AnimatedOpacity(
                       opacity: controller.showCopiedMessage.value ? 1.0 : 0.0,
-                      duration: Duration(milliseconds: 300),
+                      duration: const Duration(milliseconds: 300),
                       child: controller.showCopiedMessage.isTrue
                           ? Container(
                               width: 122.w,
@@ -222,7 +222,7 @@ class BackupScreen extends GetView<CreateWalletController> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Icon(
+                                    const Icon(
                                       Icons.check,
                                       color: kGreenColor,
                                     ),
@@ -271,6 +271,8 @@ class BackupScreen extends GetView<CreateWalletController> {
 }
 
 class BottomSheetContent extends StatelessWidget {
+  const BottomSheetContent({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(

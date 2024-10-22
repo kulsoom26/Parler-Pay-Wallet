@@ -30,10 +30,10 @@ class CustomScaffold extends StatefulWidget {
   Widget? floatingActionButton;
   double leadingWidth = 70;
   Color? backIconColor;
-  EdgeInsets padding = EdgeInsets.only(left: 20, right: 20, top: 0, bottom: 0);
+  EdgeInsets padding = const EdgeInsets.only(left: 20, right: 20, top: 0, bottom: 0);
   Widget? drawer;
   final Function? openDrawerCallback;
-  CustomScaffold({
+  CustomScaffold({super.key, 
     required this.className,
     this.isBackIcon,
     required this.screenName,
@@ -145,7 +145,7 @@ class _CustomScaffoldState extends State<CustomScaffold> {
               extendBodyBehindAppBar: true,
               bottomNavigationBar: widget.bottomNavigationBar != null
                   ? Container(child: widget.bottomNavigationBar)
-                  : Container(
+                  : SizedBox(
                       width: 0,
                       height: 0,
                     ),

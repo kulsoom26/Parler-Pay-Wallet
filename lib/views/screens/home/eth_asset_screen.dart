@@ -68,7 +68,7 @@ class ETHAssetScreen extends GetView<HomeController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 45.h),
-              CustomAssetBanner(subtitle: '2,224.12 ETH', isTapNPay: false),
+              const CustomAssetBanner(subtitle: '2,224.12 ETH', isTapNPay: false),
               SizedBox(height: 5.h,),
               Divider(color: kWhiteColor.withOpacity(0.32), height: 0,),
               Container(
@@ -96,7 +96,7 @@ class ETHAssetScreen extends GetView<HomeController> {
                                       isScrollControlled: true,
                                       backgroundColor: Colors.transparent,
                                       builder: (context) =>
-                                          CustomFilterModal(color1: kBlueGradientColor3, color2: kBlueGradientColor4),
+                                          const CustomFilterModal(color1: kBlueGradientColor3, color2: kBlueGradientColor4),
                                     );
                             },
                             child: Text(
@@ -112,7 +112,7 @@ class ETHAssetScreen extends GetView<HomeController> {
                       SizedBox(height: 12.h),
                       ListView.builder(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         itemCount: controller.ethAssetList.length,
                         itemBuilder: (context, index) {
                           final item = controller.ethAssetList[index];

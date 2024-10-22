@@ -21,7 +21,7 @@ class WelcomeScreen extends StatelessWidget {
       scaffoldKey: scaffoldKeyWelcome,
       padding: EdgeInsets.zero,
       isFullBody: true,
-      body: Container(
+      body: SizedBox(
         height: Get.height,
         child: Stack(
           children: [

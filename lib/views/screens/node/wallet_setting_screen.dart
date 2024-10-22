@@ -68,7 +68,7 @@ class WalletSettingsScreen extends GetView<NodeController> {
                   trailing: GestureDetector(
                     onTap: (){
                     },
-                    child: Icon(Icons.keyboard_arrow_right, color: kWhiteColor,),
+                    child: const Icon(Icons.keyboard_arrow_right, color: kWhiteColor,),
                   ),
                 ),
                 SizedBox(height: 30.h,),

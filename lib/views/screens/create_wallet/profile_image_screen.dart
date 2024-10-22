@@ -113,7 +113,7 @@ class ProfileImageScreen extends GetView<CreateWalletController> {
               SizedBox(
                 height: 36.h,
               ),
-              CustomProfileImagePicker()
+              const CustomProfileImagePicker()
             ],
           ),
         ),

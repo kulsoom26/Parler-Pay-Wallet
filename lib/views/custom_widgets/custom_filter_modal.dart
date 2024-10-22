@@ -20,7 +20,7 @@ class CustomFilterModal extends StatelessWidget {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20),
           topRight: Radius.circular(20),
         ),
@@ -31,7 +31,7 @@ class CustomFilterModal extends StatelessWidget {
         children: [
           SizedBox(
             width: 80.w,
-            child: Divider(
+            child: const Divider(
               color: kGray500,
             ),
           ),
@@ -41,7 +41,7 @@ class CustomFilterModal extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -51,7 +51,7 @@ class CustomFilterModal extends StatelessWidget {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kWhiteColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -68,11 +68,11 @@ class CustomFilterModal extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kWhiteColor))),
+                        const Center(child: Icon(Icons.close, color: kWhiteColor))),
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           
           GestureDetector(
             onTap: (){

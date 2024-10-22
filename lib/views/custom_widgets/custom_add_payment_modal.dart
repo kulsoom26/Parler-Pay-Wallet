@@ -9,6 +9,8 @@ import '../../utils/app_styles.dart';
 import 'custom_button.dart';
 
 class CustomAddPaymentModal extends StatelessWidget {
+  const CustomAddPaymentModal({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +31,7 @@ class CustomAddPaymentModal extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -39,7 +41,7 @@ class CustomAddPaymentModal extends StatelessWidget {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kBlackColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -56,7 +58,7 @@ class CustomAddPaymentModal extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kBlackColor))),
+                        const Center(child: Icon(Icons.close, color: kBlackColor))),
               ),
             ],
           ),
@@ -121,7 +123,7 @@ class CustomAddPaymentModal extends StatelessWidget {
                   SizedBox(
                     height: 17.h,
                   ),
-                  Divider(
+                  const Divider(
                     color: kGray300,
                   ),
                   GestureDetector(
@@ -191,6 +193,8 @@ class CustomAddPaymentModal extends StatelessWidget {
 }
 
 class AddBank extends StatelessWidget {
+  const AddBank({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -211,7 +215,7 @@ class AddBank extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -221,7 +225,7 @@ class AddBank extends StatelessWidget {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kBlackColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -238,7 +242,7 @@ class AddBank extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kBlackColor))),
+                        const Center(child: Icon(Icons.close, color: kBlackColor))),
               ),
             ],
           ),
@@ -275,6 +279,8 @@ class AddBank extends StatelessWidget {
 }
 
 class AddCard extends StatelessWidget {
+  const AddCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -295,7 +301,7 @@ class AddCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               SizedBox(
                 width: 40.w,
               ),
@@ -305,7 +311,7 @@ class AddCard extends StatelessWidget {
                 style: AppStyles.labelTextStyle()
                     .copyWith(color: kBlackColor, fontWeight: FontWeight.w600),
               )),
-              Spacer(),
+              const Spacer(),
               GestureDetector(
                 onTap: () {
                   Get.back();
@@ -322,7 +328,7 @@ class AddCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16.r),
                     ),
                     child:
-                        Center(child: Icon(Icons.close, color: kBlackColor))),
+                        const Center(child: Icon(Icons.close, color: kBlackColor))),
               ),
             ],
           ),
@@ -354,7 +360,7 @@ class AddCard extends StatelessWidget {
                       .copyWith(color: kGray600, fontSize: 12.sp),
                   children: [
                 TextSpan(
-                  text: ' terms \& conditions',
+                  text: ' terms & conditions',
                   style: AppStyles.labelTextStyle()
                       .copyWith(color: kBlueColor, fontSize: 12.sp),
                 )
@@ -384,14 +390,14 @@ class CustomTextField1 extends StatefulWidget {
   final double? width;
 
   const CustomTextField1({
-    Key? key,
+    super.key,
     required this.hint,
     required this.controller,
     this.isPassword = false,
     this.maxLines,
     this.height,
     this.width,
-  }) : super(key: key);
+  });
 
   @override
   _CustomTextField1State createState() => _CustomTextField1State();
@@ -430,7 +436,7 @@ class _CustomTextField1State extends State<CustomTextField1> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9999),
-            borderSide: BorderSide(color: kBlackColor),
+            borderSide: const BorderSide(color: kBlackColor),
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(9999),
